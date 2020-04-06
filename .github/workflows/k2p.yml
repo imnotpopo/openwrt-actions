@@ -59,7 +59,7 @@ jobs:
     
     - name: Custom configure file (via ssh)
       uses: P3TERX/debugger-action@master
-      if: SSH_ACTIONS == 'true'
+      if: env.SSH_ACTIONS == 'true'
           
     - name: Make Defconfig
       run: |
