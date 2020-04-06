@@ -5,7 +5,7 @@
 # Author: P3TERX
 # Blog: https://p3terx.com
 #=================================================
-name: X64-Master
+name: K2P Lienol
 
 on: 
   release:
@@ -58,6 +58,7 @@ jobs:
     - name: Custom configure file (via ssh)
       env:
         SSH_ACTIONS: true
+      uses: P3TERX/debugger-action@master
           
     - name: Make Defconfig
       run: |
