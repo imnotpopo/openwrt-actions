@@ -19,6 +19,9 @@ on:
   watch:
     types: [started]
 
+env:
+  SSH_ACTIONS: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -55,8 +58,6 @@ jobs:
       run: cd openwrt && ./scripts/feeds install -a
     
     - name: Custom configure file (via ssh)
-      env:
-        SSH_ACTIONS: true
       uses: P3TERX/debugger-action@master
       if: SSH_ACTIONS == 'true'
           
